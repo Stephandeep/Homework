@@ -1,59 +1,40 @@
 "use strict";
+const numberOfFilms =  +prompt('Сколько фильмо Вы уже просмотрели?', '', '');
+//  нужно использовать промпт чтобы задать вопрос пользователю
 
-// const numberOfFilms =  +prompt('Сколько фильмо Вы уже просмотрели?', '', '');
-// //  нужно использовать промпт чтобы задать вопрос пользователю
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    geners: [],
+    privan: false
+};
+// здесь мы создавали обьект и соответственно помещаем в него свойства 
 
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     geners: [],
-//     privan: false
-// };
-// // здесь мы создавали обьект и соответственно помещаем в него свойства 
-// const a = prompt('Один из последних просмотреных фильмов?', ''),
-//       b = prompt('На сколько оцените его?', ''),
-//       c = prompt('Один из последних просмотреных фильмов?', ''),
-//       d = prompt('На сколько оцените его?', '');
-// // тут мы задали пользователю вопрос и ниже получаем ответ 
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Один из последних просмотреных фильмов?', ''),
+          b = prompt('На сколько оцените его?', '');
+    
+    if (a != null && b != null && a != '' && b != '' && a.length <50) {
 
-// // и всегда в конце добавляем консоль чтобы проверить что все в порядке 
-// console.log(personalMovieDB);
+        personalMovieDB.movies[a] = b;
+        console.log('done')    
+    } else {
+        console.log('error');
+        i--;
+    }
+   
+     
+}
 
-// if (4 == 9) {
-//     console.log('Ok!');
-// } else {
-//     console.log('error!');
-// }
-
-const num = 50;
-
-if (num < 49) {
-    console.log('Error');
-} else if (num > 100) {
-    console.log('many');
+if (personalMovieDB.count < 10) {
+    console.log("Просмотрено довольно мало фильмов");
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count <30) {
+    console.log("Вы классический зритель");
+} else if (personalMovieDB.count >= 30) {
+    console.log("Вы киноман");
 } else {
-    console.log('Ok');
+    console.log("Произошла ошибка");
 }
 
-(num == 50) ? console.log('Ok'): console.log('Error');
-
-const num = 50;
-switch (num) {
-    case 49:
-        console.log('False');
-        break;
-    case 100:
-        console.log('False');
-        break;
-    case 50:
-        console.log('TRUE');
-        break;
-    default:
-        console.log('TryAgain');
-        break;
-}
-
-
+console.log(personalMovieDB);
