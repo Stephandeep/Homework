@@ -1,6 +1,86 @@
 "use strict";
 
 
+const options = {
+    name: 'test',
+    wisth: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    }
+};
+
+// console.log(options.name);
+
+// delete options.name;
+
+// console.log(options);
+
+// let counter  = 0; 
+// for (let key in options) {
+//     if (typeof(options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);  
+//             counter++;
+//         }
+//     } else {
+//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//         counter++;
+//     }
+    
+// }
+// console.log(counter);
+
+// console.log(Object.keys(options).length);
+
+// const home = {
+//     kitchen: 'red',
+//     badroom: {
+//         color: 'black',
+//         height: 2500,
+//         wisth: 5000,
+//         window: 'two'
+//     },
+//     toilet: 'small',
+//     garrage: 1
+
+
+// };
+
+options.makeTest();
+
+const {border, bg} = options.colors;
+
+
+// console.log(Object.keys(home).length);
+
+// function first () {
+// //  Do something
+// setTimeout(function(){
+//     console.log(1);
+// }, 500);
+
+// }
+
+// function second() {
+//     console.log(2);
+
+// }
+// first();
+// second();
+
+
+// function learnJS(lang, callback) {
+//     console.log(`Я учу: ${lang}`);
+//     callback();
+// }
+// function done() {
+//     console.log('ya proshel JS');
+// }
+
+// learnJS('JS', done);
+
 // const str = "Test";
 // // const arr = [1, 2, 4];
 
@@ -83,81 +163,81 @@
 
 
 
-let numberOfFilms;
-//  нужно использовать промпт чтобы задать вопрос пользователю
-function start() {
-    numberOfFilms =  prompt('Сколько фильмо Вы уже просмотрели?', '');
+// let numberOfFilms;
+// //  нужно использовать промпт чтобы задать вопрос пользователю
+// function start() {
+//     numberOfFilms =  prompt('Сколько фильмо Вы уже просмотрели?', '');
 
-    while (numberOfFilms == '' || numberOfFilms == null || numberOfFilms == isNaN(numberOfFilms)){
-        numberOfFilms =  prompt('Сколько фильмо Вы уже просмотрели?', '');       
-    }
-}
+//     while (numberOfFilms == '' || numberOfFilms == null || numberOfFilms == isNaN(numberOfFilms)){
+//         numberOfFilms =  prompt('Сколько фильмо Вы уже просмотрели?', '');       
+//     }
+// }
 
-start();
+// start();
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    geners: [],
-    privat: false
-};
-// здесь мы создавали обьект и соответственно помещаем в него свойства 
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     geners: [],
+//     privat: false
+// };
+// // здесь мы создавали обьект и соответственно помещаем в него свойства 
 
-function rememberMyFilms(){
-    for (let i = 0; i < 2; i++) {
-        const a = prompt('Один из последних просмотреных фильмов?', ''),
-              b = prompt('На сколько оцените его?', '');
+// function rememberMyFilms(){
+//     for (let i = 0; i < 2; i++) {
+//         const a = prompt('Один из последних просмотреных фильмов?', ''),
+//               b = prompt('На сколько оцените его?', '');
         
-        if (a != null && b != null && a != '' && b != '' && a.length <50) {
+//         if (a != null && b != null && a != '' && b != '' && a.length <50) {
     
-            personalMovieDB.movies[a] = b;
-            console.log('done');    
-        } else {
-            console.log('error');
-            i--;
-        }
+//             personalMovieDB.movies[a] = b;
+//             console.log('done');    
+//         } else {
+//             console.log('error');
+//             i--;
+//         }
        
          
-    }
-}
-// rememberMyFilms();
+//     }
+// }
+// // rememberMyFilms();
 
-function detectPersonalLevel(){
-    for (let i = 0; i < 2; i++) {
-        const a = prompt('Один из последних просмотреных фильмов?', ''),
-              b = prompt('На сколько оцените его?', '');
+// function detectPersonalLevel(){
+//     for (let i = 0; i < 2; i++) {
+//         const a = prompt('Один из последних просмотреных фильмов?', ''),
+//               b = prompt('На сколько оцените его?', '');
         
-        if (a != null && b != null && a != '' && b != '' && a.length <50) {
+//         if (a != null && b != null && a != '' && b != '' && a.length <50) {
     
-            personalMovieDB.movies[a] = b;
-            console.log('done');  
-        } else {
-            console.log('error');
-            i--;
-        }
+//             personalMovieDB.movies[a] = b;
+//             console.log('done');  
+//         } else {
+//             console.log('error');
+//             i--;
+//         }
        
          
-    }  
-}
+//     }  
+// }
 
-// detectPersonalLevel();
+// // detectPersonalLevel();
 
-function showMyDB (hidden){
-    if (!hidden) {
-        console.log(personalMovieDB);
-    }
+// function showMyDB (hidden){
+//     if (!hidden) {
+//         console.log(personalMovieDB);
+//     }
 
-}
+// }
 
-showMyDB(personalMovieDB.privat);
+// showMyDB(personalMovieDB.privat);
 
-function writeYuourGenres() {
-    for (let i = 1; i <=3; i++) {
-        const genre = prompt(`Ваш любимый жанр под номером ${i}`);
-        personalMovieDB.geners[i] = genre;
-    }
-}
+// function writeYuourGenres() {
+//     for (let i = 1; i <=3; i++) {
+//         const genre = prompt(`Ваш любимый жанр под номером ${i}`);
+//         personalMovieDB.geners[i] = genre;
+//     }
+// }
 
-writeYuourGenres();
-console.log(personalMovieDB);
+// writeYuourGenres();
+// console.log(personalMovieDB);
