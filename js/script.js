@@ -1,56 +1,87 @@
 "use strict";
 
+const arr = [1, 2, 13, 26, 8, 10];
+arr.sort(compareNum);
+console.log(arr);
 
-const options = {
-    name: 'test',
-    wisth: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    }
-};
+function compareNum(a, b) {
+    return a -b; 
+}
+// arr[99] = 0;
+// console.log(arr.length);
+// console.log(arr);
+// arr.forEach(function(item, i, arr) {
+//     console.log(`${i}: ${item}  внутри массива ${arr}`);
+// }); 
 
-// console.log(options.name);
+// arr.pop();
+// arr.push(10);
 
-// delete options.name;
+// console.log(arr);
 
-// console.log(options);
-
-// let counter  = 0; 
-// for (let key in options) {
-//     if (typeof(options[key]) === 'object') {
-//         for (let i in options[key]) {
-//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);  
-//             counter++;
-//         }
-//     } else {
-//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
-//         counter++;
-//     }
-    
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
 // }
-// console.log(counter);
 
-// console.log(Object.keys(options).length);
+// for (let value of arr) {
+//     console.log(value);
+// }
 
-// const home = {
-//     kitchen: 'red',
-//     badroom: {
-//         color: 'black',
-//         height: 2500,
-//         wisth: 5000,
-//         window: 'two'
-//     },
-//     toilet: 'small',
-//     garrage: 1
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+// console.log(products.join('; '));
 
-
+// const options = {
+//     name: 'test',
+//     wisth: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     }
 // };
 
-options.makeTest();
+// // console.log(options.name);
 
-const {border, bg} = options.colors;
+// // delete options.name;
+
+// // console.log(options);
+
+// // let counter  = 0; 
+// // for (let key in options) {
+// //     if (typeof(options[key]) === 'object') {
+// //         for (let i in options[key]) {
+// //             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);  
+// //             counter++;
+// //         }
+// //     } else {
+// //         console.log(`Свойство ${key} имеет значение ${options[key]}`);
+// //         counter++;
+// //     }
+    
+// // }
+// // console.log(counter);
+
+// // console.log(Object.keys(options).length);
+
+// // const home = {
+// //     kitchen: 'red',
+// //     badroom: {
+// //         color: 'black',
+// //         height: 2500,
+// //         wisth: 5000,
+// //         window: 'two'
+// //     },
+// //     toilet: 'small',
+// //     garrage: 1
+
+
+// // };
+
+// options.makeTest();
+
+// const {border, bg} = options.colors;
 
 
 // console.log(Object.keys(home).length);
