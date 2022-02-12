@@ -1,5 +1,37 @@
 "use strict";
 
+
+let str = "some";
+let strObj = new String(str);
+
+// console.log(typeof(str));
+// console.log(typeof(strObj));
+
+console.dir([1, 2, 3]);
+
+
+const solder = {
+    helth: 400,
+    armor: 100,
+    sayHello: function(){
+        console.log("Hello");
+    }
+};
+
+const John = Object.create(solder);
+
+// const John = {
+//     helth: 100,
+// };
+
+// John.__proto__ = solder;
+
+// Object.setPrototypeOf(John, solder);
+
+// console.log(John.armor);
+John.sayHello();
+
+
 // let a = 5;
 //     b = a;
 
@@ -20,81 +52,81 @@
 // console.log(copy);
 // console.log(obj);
 
-function copy (mainObject) {
-    let objCopy = {};
+// function copy (mainObject) {
+//     let objCopy = {};
 
-    let key;
-    for (key in mainObject) {
-        objCopy[key] = mainObject[key];
-    }
+//     let key;
+//     for (key in mainObject) {
+//         objCopy[key] = mainObject[key];
+//     }
 
-    return objCopy;
-}
+//     return objCopy;
+// }
 
-const numbers = {
-    a: 2,
-    b: 5,
-    c: {
-        x: 7,
-        y: 4
-    }
-};
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
 
-const newNumbers = copy(numbers);
+// const newNumbers = copy(numbers);
 
-newNumbers.a = 10;
-newNumbers.c.x = 10;
-// console.log(newNumbers);
-// console.log(numbers);
+// newNumbers.a = 10;
+// newNumbers.c.x = 10;
+// // console.log(newNumbers);
+// // console.log(numbers);
 
-const add = {
-    d: 17,
-    e: 20
-};
+// const add = {
+//     d: 17,
+//     e: 20
+// };
 
-const clone = Object.assign({}, add);
+// const clone = Object.assign({}, add);
 
-clone.d = 20;
+// clone.d = 20;
 
-// console.log(add);
-// console.log(clone);
+// // console.log(add);
+// // console.log(clone);
 
-const oldArray = ['a', 'b', 'c'];
-const newArray = oldArray.slice();
-
-
-newArray[1] = 'dksdflsfsd';
-console.log(newArray);
-console.log(oldArray);
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
 
 
-const video = ['youtube', 'vimeo', 'rutube'],
-      blogs = ['worldpress', 'livejournal', 'blogger'];
-      internet = [...video, ...blogs, 'VK', 'facebook'];
-
-console.log(internet);
-
-function log(a, b, c) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
-
-const num = [2, 5, 7];
-
-log(...num);
+// newArray[1] = 'dksdflsfsd';
+// console.log(newArray);
+// console.log(oldArray);
 
 
-const array = ["a", "b"];
+// const video = ['youtube', 'vimeo', 'rutube'],
+//       blogs = ['worldpress', 'livejournal', 'blogger'],
+//       internet = [...video, ...blogs, 'VK', 'facebook'];
 
-const newAarray = [...array];
+// console.log(internet);
 
-const q = {
-    one: 1,
-    two: 2
-};
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
 
-const newObj = {...q};
+// const num = [2, 5, 7];
+
+// log(...num);
+
+
+// const array = ["a", "b"];
+
+// const newAarray = [...array];
+
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+
+// const newObj = {...q};
 
 // const arr = [1, 2, 13, 26, 8, 10];
 // arr.sort(compareNum);
