@@ -1,22 +1,34 @@
 'use strict';
 
-function createCounter () {
-    let counter = 0;
+// let number  = 5;
 
-    const myFunction = function(){
-        counter = counter + 1;
-        return counter;
-    };
+// function logNumber() {
+//     console.log(number);
+// }
 
-    return myFunction;
-}
+// number  = 6;
 
-const increment = createCounter();
-const c1 = increment();
-const c2 = increment();
-const c3 = increment();
+// logNumber();
 
-console.log(c1, c2, c3);
+// function createCounter () {
+//     let counter = 0;
+
+//     const myFunction = function(){
+//         counter = counter + 1;
+//         return counter;
+//     };
+
+//     return myFunction;
+// }
+
+// const increment = createCounter();
+// const c1 = increment();
+// const c2 = increment();
+// const c3 = increment();
+
+// console.log(c1, c2, c3);
+
+
 // let number = 5; debugger
 
 // function logNumber() {
